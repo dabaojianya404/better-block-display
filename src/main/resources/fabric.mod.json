@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "better_block_display",
+  "version": "${version}",
+  "name": "更好的方块显示",
+  "description": "结构空位可以像屏障方块一样显示",
+  "authors": [
+    "dabaojianya"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "CC0-1.0",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "cn.dabaojianya.better_block_display.ExampleMod"
+    ],
+    "client": [
+      "cn.dabaojianya.better_block_display.client.ExampleModClient"
+    ],
+    "fabric-datagen": [
+      "cn.dabaojianya.better_block_display.datagen.ModDataGenerator"
+    ]
+  },
+  "mixins": [
+    "better_block_display.mixins.json",
+    {
+      "config": "better_block_display.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*"
+  }
+}
