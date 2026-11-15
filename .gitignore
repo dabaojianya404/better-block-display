@@ -38,3 +38,6 @@ hs_err_*.log
 replay_*.log
 *.hprof
 *.jfr
+
+# local build target configuration
+.build-target-props.json
